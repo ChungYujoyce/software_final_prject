@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="views/css/upload.css"> 
+    <link rel="stylesheet" href="views/css/nav.css"> 
+    <!--<link rel="stylesheet" href="../css/upload.css"> 
+    <link rel="stylesheet" href="../css/nav.css"> -->
+    <link rel="icon" href="views/icon.png" type="image/png">
+    <title>Videoh</title>
+</head>
+<body>
+    <div class="m-notification">
+        <div class="mn-title">訊息</div>
+        <div class="mn-list">
+        </div>
+    </div>
+    <div class="n-notification">
+        <div class="nn-title">通知</div>
+        <div class="nn-list">
+        </div>
+    </div>
+    <div class="nav">
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="brand"><img src="views/logo.png"></div>
+        <div class="menu">
+            <div class="menu-item"></div>
+        </div>
+        <div class="search">
+            <div class="search-box">
+                <input class="search-txt" placeholder="搜尋">
+                <a href="#" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <div class="search-advice"></div>
+        </div>
+        <div class="usr-action">
+            <div class="islogin">
+                <div class="act-item notification">
+                    <div class="unview"></div>
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="act-item message">
+                    <div class="unviewmessage"></div>
+                    <i class="far fa-comment-dots"></i>
+                </div>
+                <div class="act-item user-icon"><img></div>
+                <div class="user-func">
+                    <div class="manage">
+                        <div class="m-img">
+                            <div class="m-icon"><img></div>
+                        </div>
+                        <div class="m-txt">
+                            <div class="m-name">王楷翔</div>
+                            <div class="m-email">bruce1198@gmail.com</div>
+                            <div class="manage-btn">管理你的帳戶</div>
+                        </div>
+                    </div>
+                    <div class="func-item theme">
+                        <i class="fas fa-sun"></i>
+                        <span>深色主題: 關閉</span> 
+                    </div>
+                    <div class="func-item act-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>登出</span> 
+                    </div>
+                </div>
+            </div>
+            <div class="notlogin">
+                <div class="act-item act-login">
+                    登入
+                </div>
+                <div class="act-item act-register">
+                    註冊
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="drag-file">
+            <div class="dotted">
+                <div class="upload-btn"><i class="fas fa-cloud-upload-alt"></i></div>
+                <div class="upload-desc">選取要上傳的檔案</div>
+                <div class="upload-desc2">或將影片檔案拖曳到這裡</div>
+            </div>
+        </div>
+        <div class="upload-edit">
+            <div class="preview">
+                <div class="video">
+                    <div class="time-handle"></div>
+                    <img class="preview-img">
+                </div>
+                <div class="status">上傳狀態: 上傳中...</div>
+                <div class="logo">
+                    <img src="views/video.png" alt="">
+                </div>
+            </div>
+            <div class="detail">
+                <div class="progress-bar">
+                    <div class="value">
+                    </div>
+                    <div class="handle">0%</div>
+                </div>
+                <div class="pagination">
+                    <div class="basic">基本資訊</div>
+                    <div class="chs-pic">預覽圖片</div>
+                </div>
+                <div class="basic-border"></div>
+                <div class="window">
+                    <div class="whole-page">
+                        <div class="page1">
+                            <input class="video-name" type="text" placeholder="影片名稱"><br>
+                            <textarea class="video-desc" placeholder="影片描述"></textarea>
+                        </div>
+                        <div class="page2">
+                            <div class="check-group">
+                                <input type="checkbox" class="checkbox use" value="boy" checked>自行拉動影片時間位置<br>
+                                <input type="checkbox" class="checkbox up" value="girl">從電腦中上傳圖片
+                            </div>
+                            <!--<div class="select-time">
+                                <div class="time-handle"></div>
+                                <video></video>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="release">發佈</div>
+            </div>
+        </div>
+        <div class="go-back">
+            <div class="big-brand"><img src="views/logo.png"></div>
+            <span>已成功發布您的新影片囉！</span>
+            <div class="go-home">回首頁</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="views/js/upload.js"></script>
+    <script src="views/js/nav.js"></script>
+    <!--<script src="../js/nav.js"></script>
+    <script src="../js/upload.js"></script>-->
+</body>
+</html>

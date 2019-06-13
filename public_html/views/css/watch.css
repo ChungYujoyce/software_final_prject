@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+video::-webkit-media-controls {
+    display:none !important;
+}
+video, img {
+    width: 100%;
+    height: 100%;
+}
+body {
+    color: black;
+    background: white;
+}
+.content {
+    width: 89vw;
+    padding-top: calc(60px + 2vw);
+    padding-left: 10vw;
+}
+/*override sidebar*/
+.sidebar {
+    float: none;
+    top: 60px;
+    margin-top: 0;
+    left: -280px;
+    transition: 0.4s;
+}
+.sidebar-small {
+    width: 280px;
+    background-color: #f5db8d;
+    left: 0;
+}
+.side-item-big {
+    width: calc(100% - 20px);
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.side-item-big span {
+    font-size: 16px;
+}
+.side-item-big i {
+    width: 60px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.video-view {
+    float: left;
+    width: 55vw;
+    padding-bottom: 50px;
+}
+.video {
+    position: relative;
+    width: 100%;
+    height: 30.9375vw;
+    background: black;
+}
+.video-title-hover {
+    position: absolute;
+    display: none;
+    width: calc(100% - 40px);
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    background-image: linear-gradient(#00000070, #ffffff00);
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+.big-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 5px #00000070;
+}
+.big-play i {
+    color: #aaaaaa70;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.big-play i:hover {
+    color: #ffa502;
+}
+.control {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 65px;
+    bottom: 0;
+    background-image: linear-gradient(#ffffff00, #33333370, #00000070);
+}
+.progress {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-top: 5px;
+    transform: translate(0, 10px);
+}
+.progress:hover {
+    margin-top: 1px;
+    transform: translate(0, 12px);
+}
+.progress:hover .handle {
+    display: block;
+    transform: translate(-50%, calc(-50% + 3.5px)) scale(15);
+}
+.progress:hover .progress-bar {
+    height: 7px;
+    margin-top: 0;
+}
+.progress:hover .value{
+    height: 7px;
+}
+.progress:hover .buffer{
+    height: 7px;
+}
+.progress-bar {
+    width: 97.5%;
+    margin: 0 1.25%;
+    height: 3px;
+    background: #aaaaaa60;
+    cursor: pointer;
+}
+.value {
+    float: left;
+    width: 0;
+    height: 3px;
+    background: #ffa502;
+}
+.handle {
+    margin-left: 0;
+    display: none;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffa502;
+    transform: translate(-50%, calc(-50% + 1.5px)) scale(15);
+    transition: display 0.4s;
+}
+.buffer {
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: #ffffff70;
+    z-index: -1;
+}
+.other-controls {
+    width: 97.5%;
+    margin: 0 1.25%;
+    margin-top: 0;
+    height: 37px;
+}
+.ctrl-item {
+    float: left;
+    color: #eee;
+}
+.ctrl-item i {
+    font-size: 18px;
+    margin: 9.5px 10px;
+    cursor: pointer;
+    text-shadow: 0 0 2px #00000070;
+}
+.ctrl i:hover {
+    color: white;
+}
+.position {
+    height: 37px;
+    line-height: 37px;
+    vertical-align: center;
+    font-size: 10px;
+    color: #ddd;
+    float: left;
+}
+.volume:hover + .vol-ctrl{
+    width: 80px;
+}
+.volume:hover + .vol-ctrl .vol-handle {
+    display: block;
+}
+.vol-ctrl {
+    float: left;
+    width: 0;
+    height: 37px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.vol-ctrl:hover {
+    width: 80px;
+}
+.vol-ctrl:hover .vol-handle {
+    display: block;
+}
+.vol-bar {
+    width: 90%;
+    height: 5px;
+    background: #55555570;
+    border-radius: 5px;
+    margin: 16px 0;
+    cursor: pointer;
+}
+.vol-value {
+    float: left;
+    width: 70%;
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.vol-handle {
+    display: none;
+    margin-left: 70%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    transform: translate(-50%, calc(-50% + 2.5px));
+    cursor: pointer;
+}
+.speed {
+    float: right;
+    transition: 0.4s;
+}
+.speed:hover {
+    transform: rotate(-45deg);
+}
+.full, .pip {
+    float: right;
+}
+.speed-selector {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    right: 80px;
+    bottom: 50px;
+    background: #00000070;
+    transform: translate(50%, 0);
+}
+.aspeed {
+    width: calc(100% - 20px);
+    height: 20px;
+    padding: 2.5px 10px;
+    text-align: start;
+    color: white;
+    cursor: pointer;
+}
+.aspeed i {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.aspeed span {
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    float: left;
+}
+.detail {
+    margin-top: 20px;
+}
+.border {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+.video-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.video-detail {
+    width: 100%;
+    height: 30px;
+}
+.watched-count {
+    float: left;
+    color: gray;
+}
+.detail-act {
+    color: gray;
+    float: right;
+    height: 25px;
+    margin: 5px 10px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.detail-act i {
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+}
+.vusr-content {
+    display: inline;
+}
+.basic-info {
+    width: 100%;
+    height: 50px;
+}
+.vusr-icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.info {
+    float: left;
+    margin-left: 10px;
+}
+.vusr-name {
+    font-weight: 500;
+    margin: 3px 0;
+    cursor: pointer;
+}
+.vusr-name:hover {
+    text-decoration: underline;
+}
+.upload-time {
+    font-size: 14px;
+    color: gray;
+}
+.subscribe {
+    float: right;
+}
+.video-desc {
+    max-height: 150px;
+    width: 60%;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+.show-whole {
+    font-size: 14px;
+    margin-left: 60px;
+    color: #aaa;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.reply-total {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.scb-btn {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background: #ffa502;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 2.5;
+    vertical-align: center;
+    margin: 3px 0;
+}
+.do-reply {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+}
+.dicon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+.dinput {
+    float: left;
+    height: 45px;
+    line-height: 40px;
+    width: calc(100% - 55px);
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px #ccc solid;
+    outline: none;
+}
+.a-reply {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+.ricon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+.rtxt {
+    float: left;
+}
+.rinfo {
+    display: inline-block;
+}
+.rname {
+    float: left;
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.r-time {
+    float: left;
+    color: gray;
+    font-size: 14px;
+    line-height: 25px;
+}
+.like-content {
+    display: none;
+    float: left;
+    width: 22vw;
+    margin-left: 1vw;
+    background: #eee;
+    border-radius: 5px;
+}
+.like-title {
+    padding: 30px 10px;
+    font-size: 20px;
+    background: #bbb;
+}
+.card {
+    width: 100%;
+    height: 90px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.id {
+    float: left;
+    height: 90px;
+    width: 20px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 90px;
+}
+.card-preview {
+    float: left;
+    width: 160px;
+    height: 90px; 
+    background: black;
+    margin-left: 10px;
+}
+.card-txt {
+    width: calc(100% - 215px);
+    float: left;
+    margin-left: 10px;
+}
+.card-name {
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 20px;        /* fallback */
+    max-height: 40px; 
+}
+.card-owner {
+    color: gray;
+    font-size: 14px;
+}
+.card:hover {
+    background: #f5db8d50;
+}
+.c-selected {
+    background: #f5db8d50;
+}
+.other-video {
+    float: left;
+    width: 22vw;
+    margin-left: 1vw;
+}
+.other-border {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+.video-card {
+    width: 22vw;
+    height: 6vw;
+    cursor: pointer;
+}
+.v-pic {
+    float: left;
+    width: 45%;
+    height: 100%;
+    background: black;
+}
+.v-txt {
+    float: left;
+    width: calc(55% - 20px);
+    height: 100%;
+    padding: 0 10px;
+}
+.v-name {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 20px;        /* fallback */
+    max-height: 50px; 
+}
+.v-owner {
+    width: 100%;
+    margin-top: 20px;
+    color: gray;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 20px;        /* fallback */
+    max-height: 50px; 
+}
+.share-view {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 460px;
+    height: 470px;
+    padding: 20px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #00000070;
+    transform: translate(-50%, -50%);
+    z-index: 555;
+}
+.bar {
+    width: 100%;
+    height: 40px;
+}
+.share-title {
+    font-size: 20px;
+    font-weight: 500;
+    float: left;
+}
+.close-btn {
+    float: right;
+    cursor: pointer;
+}
+.share-input {
+    border: none;
+    border-bottom: 1px black solid;
+    outline: none;
+    font-size: 16px;
+    margin: 0 10px;
+}
+.friends {
+    margin-top: 10px;
+    height: 70px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.friend {
+    width: 70px;
+    height: 70px;
+    float: left;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+.friend-icon {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.friend-name {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cut-view {
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    height: 250px;
+    background: black;
+}
+.rtime {
+    position: absolute;
+    left: 100%;
+    top: -20px;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 12px;
+    user-select: none;
+}
+.ltime {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 12px;
+    user-select: none;
+}
+.lline, .rline {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: #6a8ce7;
+    cursor: pointer;
+}
+.lline:hover {
+    width: 10px;
+    transform: translate(-3.5px, 0);
+} 
+.rline:hover {
+    width: 10px;
+    transform: translate(calc(-100% + 3.5px), 0);
+}
+.lline {
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.rline {
+    top: 0;
+    left: 100%;
+    z-index: 99;
+    transform: translate(-100%, 0);
+}
+.preview-time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background: #c1cef380;
+    height: 100%;
+    z-index: 9;
+}
+.share-act {
+    width: 100%;
+}
+.try {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+.try i {
+    color: gray;
+    font-size: 30px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.send {
+    float: right;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #2350ce;
+    width: 40px;
+    height: 30px;
+}
+.video-id, .friend-id {
+    display: none;
+}
+@media screen and (max-width: 1080px) {
+    .content {
+        width: 90vw;
+        padding: calc(60px + 2vw) 5vw 0 5vw;
+    }
+    .video-view {
+        width: 90vw;
+    }
+    .video {
+        height: 50.625vw;
+    }
+    .other-video {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .search {
+        display: none;
+    }
+    .usr-action {
+        display: none;
+    }
+}

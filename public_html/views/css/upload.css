@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+video, img {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 100px;
+    left: 50%;
+    width: 60vw;
+    height: 30vw;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #00000070;
+}
+.drag-file {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.dotted {
+    width: calc(100% - 26px);
+    height: calc(100% - 126px);
+    margin: 10px;
+    text-align: center;
+    padding-top: 100px;
+    border: 3px #ff6b81 dashed;
+    transition: all 0.4s;
+}
+.upload-btn {
+    display: inline;
+    font-size: 100px;
+    color: #ddd;
+}
+.upload-btn i {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.upload-btn i:hover {
+    color: #ffa502;
+}
+.upload-desc {
+    font-size: 25px;
+}
+.upload-desc2 {
+    font-size: 20px;
+    color: gray;
+}
+.upload-edit {
+    display: none;
+}
+.preview {
+    float: left;
+    width: 22.8vw;
+    padding: 20px 0 0 1.2vw;
+    height: 100%;
+}
+.status {
+    margin-top: 10px;
+}
+.logo {
+    width: 12.8vw;
+    margin: 1vw 3vw;
+    overflow: hidden;
+    transform: rotate(-35deg);
+}
+.detail {
+    position: relative;
+    float: left;
+    width: calc(25vw - 20px);
+    padding: 20px 20px 20px 1.2vw;
+    height: calc(100% - 40px);
+}
+.video {
+    position: relative;
+    width: 19.2vw;
+    height: 11vw;
+    background: black;
+}
+.progress-bar {
+    position: relative;
+    width: calc(20vw + 10px);
+    height: 25px;
+    border: 1px #ccc solid;
+}
+.value {
+    float: left;
+    height: 25px;
+    width: 0;
+    background: #70a1ff;
+}
+.handle {
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 1.5px black;
+    transform: translate(-50%, 0);
+    z-index: 55;
+}
+.pagination {
+    height: 30px;
+    width: 200px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.basic {
+    float: left;
+    width: 80px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.chs-pic {
+    float: left;
+    width: 80px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.basic-border {
+    height: 3px;
+    width: 80px;
+    margin-left: 10px;
+    background: #ffa502;
+    transition: 0.4s;
+}
+.window {
+    width: 22vw;
+    height: 20vw;
+    overflow: hidden;
+}
+.whole-page {
+    width: 44vw;
+    height: 20vw;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.page1 {
+    width: 22vw;
+    height: 20vw;
+    float: left;
+}
+.page2 {
+    width: calc(22vw - 20px);
+    height: calc(20vw - 10px);
+    float: left;
+    padding: 5px 10px;
+}
+.select-time {
+    position: relative;
+    width: 20vw;
+    height: 11vw;
+    margin-top: 10px;
+    background: black;
+}
+.time-handle {
+    display: none;
+    width: 3px;
+    height: 100%;
+    background: #70a1ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 333;
+}
+.time-handle:hover {
+    width: 10px;
+    transform: translate(-3.5px, 0);
+}
+input[type=checkbox] {
+    margin-right: 5px;
+    height: 14px;
+}
+.video-name {
+    height: 30px;
+    width: 20vw;
+    margin: 10px 0;
+    border: 1px gray solid;
+    padding: 3px 5px;
+    border-radius: 2px;
+    font-size: 14px;
+    outline: none;
+}
+.video-desc {
+    height: 10vw;
+    width: 20vw;
+    resize: none;
+    outline: none;
+    border: 1px gray solid;
+    padding: 3px 5px;
+    border-radius: 2px;
+    outline: none;
+    font-size: 14px;
+}
+.release {
+    position: absolute;
+    bottom: 30px;
+    right: 4vw;
+    width: 50px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    background: #a6cdf3;
+}
+.go-back {
+    display: none;
+    text-align: center;
+}
+.go-back span {
+    font-size: 30px;
+}
+.big-brand {
+    width: 80%;
+    margin: 50px 10%;
+}
+.go-home {
+    margin-top: 10px;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+}
+.go-home:hover {
+    color: #e65a22;
+}
+@media screen and (max-width: 1080px) {
+    .content {
+        height: auto;
+    }
+    .preview {
+        width: 55.2vw;
+        height: 30vw;
+        padding: 20px 2.4vw 0 2.4vw;
+    }
+    .video {
+        width: 55.2vw;
+        height: 28.75vw;
+    }
+    .detail {
+        width: 57.6vw;
+        padding: 20px 20px 20px 2.4vw;
+    }
+}

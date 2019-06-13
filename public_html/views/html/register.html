@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>註冊 - Videoh</title>
+
+    <!-- Icons font CSS-->
+    <link href="views/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="views/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="views/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="views/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="views/css/register.css" rel="stylesheet" media="all">
+    <link rel="icon" href="views/icon.png" type="image/png">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading">
+                    <div class="logo"><img src="views/logo.png"></div>
+                </div>
+                <div class="card-body">
+                    <h2 class="title">註冊Videoh</h2>
+                    <form method="POST" action="go_regist">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="你的名字" name="name" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="email" placeholder="電子信箱" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Videoh帳號" name="username" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" placeholder="Videoh密碼" name="password" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" placeholder="再次輸入Videoh密碼" name="passwordConfirm" required>
+                        </div>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green register-btn" type="submit" name="regist-submit">註冊</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="views/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="views/vendor/select2/select2.min.js"></script>
+    <script src="views/vendor/datepicker/moment.min.js"></script>
+    <script src="views/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="views/js/register.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

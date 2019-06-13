@@ -1,0 +1,19 @@
+{
+    "name": "kwang/final",
+    "authors": [
+        {
+            "name": "Kwang",
+            "email": "bruce1198@gmail.com"
+        }
+    ],
+    "require": {
+        "facebook/graph-sdk": "^5.7",
+        "google/apiclient": "^2.2"
+    }, 
+    "autoload": {
+        "classmap": [
+            "libraries",
+            "config"
+        ]
+    }
+}

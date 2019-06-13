@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+video, img {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    float: right;
+    width: calc(100vw - 280px);
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+    background: white;
+}
+.content-big {
+    width: calc(100vw - 80px);
+}
+.border {
+    width: 100%;
+    height: 20px;
+    background: #f1f1f1;
+}
+.pagination {
+    width: calc(100% - 300px);
+    height: 54px;
+    padding: 0 150px;
+    background: #f1f1f1;
+    z-index: 9;
+}
+.tab {
+    width: 100%;
+    height: 50px;
+}
+.tab-line {
+    width: 90px;
+    height: 4px;
+    background: #1e90ff;
+}
+.p-item {
+    float: left;
+    width: 50px;
+    padding: 10px 20px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: #555;
+}
+.p-item:hover {
+    color: black;
+}
+.p-selected {
+    background: #bbb;
+}
+.carousel {
+    width: calc(100% - 300px);
+    margin: 20px 150px;
+    overflow-x: hidden;
+}
+.tablayout {
+    width: 400%;
+    height: 1000px;
+    transition: 0.4s;
+}
+.tab-all {
+    float: left;
+    width: 25%;
+}
+.tab-video {
+    float: left;
+    width: 25%;
+}
+.tab-person {
+    float: left;
+    width: 25%;
+}
+.tab-profile {
+    float: left;
+    width: 25%;
+    height: 1000px;
+    background: none;
+}
+.video-part, .user-part {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.video-list {
+    padding-bottom: 20px;
+    width: 100%;
+}
+.video-card {
+    width: calc(80% - 20px);
+    height: 9vw;
+    margin: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #00000070;
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+.video-title {
+    float: left;
+    padding: 10px;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 20px;        /* fallback */
+    max-height: 35px; 
+    height: 100%;
+    width: calc(70% - 20px);
+}
+.card-preview {
+    float: left;
+    width: 30%;
+    height: 100%;
+    background: black;
+}
+.person-list {
+    padding-bottom: 20px;
+    width: 100%;
+}
+.person-card {
+    width: calc(60% - 20px);
+    height: 9vw;
+    margin: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #00000070;
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+.person-url {
+    float: left;
+    width: calc(9vw - 40px);
+    height: calc(100% - 40px);
+    margin: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.person-name {
+    float: left;
+    padding-top: 50px;
+    font-size: 30px;
+}
+.person-act {
+    float: right;
+    width: calc(9vw - 40px);
+    height: 100%;
+    margin: 0 20px;
+    text-align: center;
+}
+.person-act i {
+    font-size: 40px;
+    margin: calc(4.5vw - 20px) 0;
+    color: #aaa;
+    transition: 0.4s;
+}
+.person-act i:hover {
+    color: #1e90ff;
+}
+.video-id, .person-id {
+    display: none;
+}
+@media screen and (max-width: 1320px) {
+    .content {
+        width: calc(100vw - 80px);
+    }
+}
+@media screen and (max-width: 800px) {
+    .content {
+        width: calc(100vw - 15px);
+        margin-left: 15px;
+    }
+    .border {
+        width: 100%;
+        padding: 20px 0;
+    }
+    .pagination {
+        width: 100%;
+        padding: 0;
+    }
+    .carousel {
+        width: 100%;
+        margin: 20px 0;
+    }
+}

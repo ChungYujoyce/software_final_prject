@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+video, img {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    float: right;
+    width: calc(100vw - 280px);
+    padding-top: 60px;
+    background: white;
+}
+.content-big {
+    width: calc(100vw - 80px);
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 1400px;
+}
+.video-card {
+    width: calc(16.6% - 20px);
+    height: 240px;
+    margin: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #00000070;
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+.video-title {
+    padding: 5px 5px 5px 10px;
+    font-size: 85%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 20px;        /* fallback */
+    height: 35px; 
+}
+.card-preview {
+    width: 100%;
+    height: 55%;
+    background: black;
+}
+.upload-user {
+    font-size: 14px;
+    color: gray;
+    padding: 10px 10px 0 10px;
+}
+.view-count {
+    font-size: 14px;
+    color: gray;
+    padding: 2.5px 10px;
+}
+.video-id {
+    display: none;
+}

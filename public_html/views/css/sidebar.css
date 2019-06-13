@@ -1,0 +1,154 @@
+.sidebar {
+    position: fixed;
+    float: left;
+    width: 280px;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    background: #f5db8d;
+    color: #5f5a43;
+    box-shadow: 0 0 3px #00000070;
+    z-index: 10;
+    overflow: auto;
+}
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+.sidebar-small {
+    width: 80px;
+}
+.please-login{
+    width: 200px;
+    height: 40px;
+    padding: 5px 10px;
+    background: white;
+    color: #fbc531;
+    border: 2px #fbc531 solid;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 40px;
+    transition: 0.4s;
+}
+.side-item {
+    width: calc(100% - 20px);
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.side-item-big {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+.side-item-big i {
+    width: 60px;
+    height: 30px;
+    margin: 20px 10px 0 10px;
+    font-size: 24px;
+}
+.side-item-big span {
+    width: 60px;
+    height: 20px;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 10px;
+}
+.side-item i {
+    width: 60px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.selected, .side-item:hover, .side-item-big:hover {
+    color: #e65a22;
+}
+.disable {
+    background: #e9e2cd;
+    color: gray;
+    cursor: default;
+}
+.disable:hover {
+    background: #e9e2cd;
+}
+.side-border {
+    width: 100%;
+    height: 1px;
+    background: #eee;
+}
+.friend-list {
+    width: 100%;
+    margin-top: 20px;
+}
+.afriend {
+    width: calc(100% - 40px);
+    height: 50px;
+    font-size: 18px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.afriend:hover {
+    background: #ffffff70;
+}
+.friend-id {
+    display: none;
+}
+.friend-icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.friend-name {
+    float: left;
+    width: calc(100% - 60px);
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1350px) {
+    .sidebar {
+        display: block;
+        width: 80px;
+    }
+    .side-item {
+        width: 80px;
+        height: 80px;
+        line-height: unset;
+        padding-left: 0;
+        text-align: center;
+        cursor: pointer;
+        color: black;
+    }
+    .side-item i {
+        width: 60px;
+        height: 30px;
+        margin: 20px 10px 0 10px;
+        font-size: 24px;
+    }
+    .side-item span {
+        width: 60px;
+        height: 20px;
+        margin: 0 10px;
+        text-align: center;
+        font-size: 10px;
+    }
+    .drawer-hide, .friend-list {
+        display: none;
+    }
+    .selected {
+        color: #e65a22;
+    }
+}
+@media screen and (max-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+}

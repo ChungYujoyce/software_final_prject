@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="views/css/account.css"> 
+    <link rel="stylesheet" href="views/css/nav.css"> 
+    <link rel="stylesheet" href="views/css/sidebar.css"> 
+    <link rel="stylesheet" href="../css/account.css"> 
+    <link rel="stylesheet" href="../css/nav.css"> 
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="icon" href="views/icon.png" type="image/png">
+    <title>Videoh</title>
+</head>
+<body>
+    <div class="m-notification">
+        <div class="mn-title">訊息</div>
+        <div class="mn-list">
+        </div>
+    </div>
+    <div class="n-notification">
+        <div class="nn-title">通知</div>
+        <div class="nn-list">
+        </div>
+    </div>
+    <div class="nav">
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="brand"><img src="views/logo.png"></div>
+        <div class="menu">
+            <div class="menu-item"></div>
+        </div>
+        <div class="search">
+            <div class="search-box">
+                <input class="search-txt" placeholder="搜尋">
+                <a class="search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <div class="search-advice">
+            </div>
+        </div>
+        <div class="usr-action">
+            <div class="islogin">
+                <div class="act-item notification">
+                    <div class="unview"></div>
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="act-item message">
+                    <div class="unviewmessage"></div>
+                    <i class="far fa-comment-dots"></i>
+                </div>
+                <div class="act-item user-icon"><img></div>
+                <div class="user-func">
+                    <div class="manage">
+                        <div class="m-img">
+                            <div class="m-icon"><img></div>
+                        </div>
+                        <div class="m-txt">
+                            <div class="m-name"></div>
+                            <div class="m-email"></div>
+                            <div class="manage-btn">管理你的帳戶</div>
+                        </div>
+                    </div>
+                    <div class="func-item theme">
+                        <i class="fas fa-sun"></i>
+                        <span>深色主題: 關閉</span> 
+                    </div>
+                    <div class="func-item act-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>登出</span> 
+                    </div>
+                </div>
+            </div>
+            <div class="notlogin">
+                <div class="act-item act-login">
+                    登入
+                </div>
+                <div class="act-item act-register">
+                    註冊
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="islogin">
+            <div class="side-item selected act-home">
+                <i class="fas fa-home"></i>
+                <span>首頁</span>
+            </div>
+            <div class="side-item act-subscribe">
+                <i class="fas fa-list-alt"></i>
+                <span>訂閱內容</span>
+            </div>
+            <div class="side-item act-like">
+                <i class="far fa-thumbs-up"></i>
+                <span>喜歡的影片</span>
+            </div>
+            <div class="side-border"></div>
+            <div class="side-item act-message">
+                <i class="fas fa-inbox"></i>
+                <span>我的訊息</span> 
+            </div>
+            <div class="side-item act-profile">
+                <i class="fas fa-child"></i>
+                <span>我的資料</span> 
+            </div>
+            <div class="side-item act-upload">
+                <i class="fas fa-folder-plus"></i>
+                <span>上傳影片</span> 
+            </div>
+            <div class="side-border"></div>
+            <div class="drawer-hide">
+                <div class="friend-list">
+                </div>
+            </div>
+        </div>
+        <div class="notlogin">
+            <div class="please-login">
+                請先登入
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="account">
+            <div class="aicon"><img></div>
+            <div class="awelcome">歡迎使用</div>
+            <div class="adesc">管理您的影片、社群及個人簡介。</div>
+        </div>
+        <div class="section">
+            <div class="title">個人資料</div>
+            <div class="go-or-fb">
+                <div class="gf-title"></div>
+                <div class="row">
+                    <div class="icon"></div>
+                    <div class="link"><i class="fas fa-link"></i></div>
+                    <div class="p-icon"><img></div>
+                </div>
+            </div>
+            <div class="normal">
+                <div class="p-photo p-row">
+                    <div class="p-col">相片</div>
+                    <div class="p-col">您可以透過相片來個人化您的帳戶</div>
+                    <div class="p-col-r"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="p-name p-row">
+                    <div class="p-col">名稱</div>
+                    <div class="p-col pp-name">王楷翔</div>
+                    <div class="p-col-r"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="p-email p-row">
+                    <div class="p-col">電子信箱</div>
+                    <div class="p-col pp-email">bruce1198@gmail.com</div>
+                    <div class="p-col-r"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="p-pwd p-row">
+                    <div class="p-col">密碼</div>
+                    <div class="p-col">．．．．．．．．</div>
+                    <div class="p-col-r"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+            <div class="normal-edit">
+                <div class="edit-title"></div>
+                <input type="text" class="edit-box" placeholder="" required><br>
+                <input type="password" class="edit-box-confirm p" placeholder="" required><br>
+                <input type="password" class="edit-box-confirm pc" placeholder="" required>
+                <div class="btn-group">
+                    <div class="cancel">返回</div>
+                    <div class="enter">確定</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title">您的影片</div>
+            <div class="video-list">
+                <div class="avideo">
+                </div>
+                <div class="avideo">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title">個人簡介</div>
+            <textarea class="intro" placeholder="別讓青春留下空白的啦"></textarea>
+            <div class="isave">儲存</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="views/js/nav.js"></script>
+    <script src="views/js/account.js"></script>
+    <script src="views/js/sidebar.js"></script>
+    <!--<script src="../js/account.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/sidebar.js"></script>-->
+</body>
+</html>

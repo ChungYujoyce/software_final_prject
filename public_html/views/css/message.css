@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+video, img {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    float: right;
+    width: calc(100vw - 280px);
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+    background: white;
+}
+.content-big {
+    width: calc(100vw - 80px);
+}
+.inbox {
+    position: fixed;
+    width: calc(40vw - 282px);
+    height: calc(100vh - 60px);
+    border-right: 2px solid #ccc;
+}
+.box-title {
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.search-inbox {
+    width: calc(100% - 40px);
+    height: 40px;
+    line-height: 40px;
+    margin: 20px;
+    border-radius: 5px;
+    background: #eee;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+}
+.message-list {
+    width: 100%;
+    height: calc(100% - 160px);
+    overflow: auto;
+    padding-bottom: 10px;
+}
+.message-list::-webkit-scrollbar {
+    display: none;
+}
+.amessage {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.amessage:hover {
+    background: #ededed;
+}
+.m-selected {
+    background: #ededed;   
+}
+.msg-icon {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 10px 10px 10px 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.m-text {
+    float: left;
+    width: calc(100% - 100px);
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.m-name {
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.m-preview {
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.m-time {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: gray;
+}
+.room {
+    position: fixed;
+    width: 60vw;
+    height: 100vh;
+    right: 0;
+}
+.room-title {
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.dialog {
+    width: 100%;
+    height: calc(100% - 220px);
+    padding-top: 20px;
+    padding-bottom: 5px;
+    overflow: auto;
+}
+.dialog::-webkit-scrollbar {
+    display: none;
+}
+.d-message {
+    display: inline-block;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    transition: 0.4s;
+}
+.d-icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.d-txt {
+    float: left;
+    max-width: 50%;
+    padding: 7.5px 12.5px;
+    background: #ccc;
+    margin: 10px 0;
+    border-radius: 20px;
+    text-align: justify;
+    transition: 0.1s;
+    white-space: pre-line;
+}
+.d-txt:hover {
+    background: #aaa;
+}
+.d-txt:hover + .d-time {
+    display: block;
+}
+.d-video:hover + .d-time {
+    display: block;
+}
+.r {
+    background: #ffa502;
+}
+.d-time {
+    float: left;
+    display: none;
+    margin-left: 5px;
+    font-size: 12px;
+    color: gray;
+    background: none;
+    margin-top: 25px;
+    margin-right: 5px;
+}
+.r:hover {
+    background: #d69823;
+}
+.d-video {
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 168.75px;
+    margin: 5px 0;
+    background: black;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.r {
+    float: right;
+}
+.play-btn {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.d-value {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background: #d69823;
+}
+.type-box {
+    height: 65px;
+    width: 100%;
+    border-top: 1px #e1e1e1 solid;
+}
+.input-message::placeholder {
+    color: #ddd;
+}
+.input-message {
+    float: left;
+    height: 100%;
+    width: calc(100% - 80px);
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+.send-message {
+    float: left;
+    height: 65px;
+    line-height: 65px;
+    width: 60px;
+    padding: 0 5px;
+    color: #ffa502;
+    cursor: pointer;
+}
+.friend-id, .message-id, .begin, .end {
+    display: none;
+}
+
+@media screen and (max-width: 1350px) {
+    .content {
+        width: calc(100vw - 80px);
+    }
+    .inbox {
+        width: calc(35vw - 82px);
+    }
+    .room {
+        width: 65vw;
+    }
+}
+@media screen and (max-width: 800px) {
+    .content {
+        width: calc(100vw - 15px);
+        margin-left: 15px;
+    }
+}

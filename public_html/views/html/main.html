@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="views/css/main.css"> 
+    <link rel="stylesheet" href="views/css/nav.css"> 
+    <link rel="stylesheet" href="views/css/sidebar.css"> 
+    <!--<link rel="stylesheet" href="../css/main.css"> 
+    <link rel="stylesheet" href="../css/nav.css"> 
+    <link rel="stylesheet" href="../css/sidebar.css"> -->
+    <link rel="icon" href="views/icon.png" type="image/png">
+    <title>Videoh</title>
+</head>
+<body>
+    <div class="m-notification">
+        <div class="mn-title">訊息</div>
+        <div class="mn-list">
+            <!--<div class="mn">
+                <div class="mn-icon"></div>
+                <div class="mn-txt">
+                    <div class="mn-name">王楷翔</div>
+                    <div class="mn-preview">一則訊息</div>
+                </div>
+                <div class="mn-time">下午1:10</div>
+            </div>
+            <div class="mn">
+                <div class="mn-icon"></div>
+                <div class="mn-txt">
+                    <div class="mn-name">王楷翔</div>
+                    <div class="mn-preview">一則訊息</div>
+                </div>
+                <div class="mn-time">下午1:10</div>
+            </div>-->
+        </div>
+    </div>
+    <div class="n-notification">
+        <div class="nn-title">通知</div>
+        <div class="nn-list">
+            <!--<div class="nn">
+                <div class="nn-icon"></div>
+                <div class="nn-txt">
+                    <div class="nn-content"><span>王楷翔</span>已訂閱你的頻道</div>
+                    <div class="nn-time">下午1:10</div>
+                </div>
+            </div>
+            <div class="nn">
+                <div class="nn-icon"></div>
+                <div class="nn-txt">
+                    <div class="nn-content"><span>王楷翔</span>說你的一部影片讚</div>
+                    <div class="nn-time">下午1:10</div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="nav">
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="brand"><img src="views/logo.png"></div>
+        <div class="menu">
+            <div class="menu-item"></div>
+        </div>
+        <div class="search">
+            <div class="search-box">
+                <input class="search-txt" placeholder="搜尋">
+                <a class="search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <div class="search-advice">
+                <!--<div class="advice">
+                    <div class="advice-id">123</div>
+                    <div class="advice-name">王楷翔</div>
+                </div>
+                <div class="advice">
+                    <div class="advice-id">123</div>
+                    <div class="advice-name">王楷翔</div>
+                </div>-->
+            </div>
+        </div>
+        <div class="usr-action">
+            <div class="islogin">
+                <div class="act-item notification">
+                    <div class="unview"></div>
+                    <i class="far fa-bell"></i>
+                </div>
+                <div class="act-item message">
+                    <div class="unviewmessage"></div>
+                    <i class="far fa-comment-dots"></i>
+                </div>
+                <div class="act-item user-icon"><img></div>
+                <div class="user-func">
+                    <div class="manage">
+                        <div class="m-img">
+                            <div class="m-icon"><img></div>
+                        </div>
+                        <div class="m-txt">
+                            <div class="m-name">王楷翔</div>
+                            <div class="m-email">bruce1198@gmail.com</div>
+                            <div class="manage-btn">管理你的帳戶</div>
+                        </div>
+                    </div>
+                    <div class="func-item theme">
+                        <i class="fas fa-sun"></i>
+                        <span>深色主題: 關閉</span> 
+                    </div>
+                    <div class="func-item act-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>登出</span> 
+                    </div>
+                </div>
+            </div>
+            <div class="notlogin">
+                <div class="act-item act-login">
+                    登入
+                </div>
+                <div class="act-item act-register">
+                    註冊
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="islogin">
+            <div class="side-item selected act-home">
+                <i class="fas fa-home"></i>
+                <span>首頁</span>
+            </div>
+            <div class="side-item act-subscribe">
+                <i class="fas fa-list-alt"></i>
+                <span>訂閱內容</span>
+            </div>
+            <div class="side-item act-like">
+                <i class="far fa-thumbs-up"></i>
+                <span>喜歡的影片</span>
+            </div>
+            <div class="side-border"></div>
+            <div class="side-item act-message">
+                <i class="fas fa-inbox"></i>
+                <span>我的訊息</span> 
+            </div>
+            <div class="side-item act-profile">
+                <i class="fas fa-child"></i>
+                <span>我的資料</span> 
+            </div>
+            <div class="side-item act-upload">
+                <i class="fas fa-folder-plus"></i>
+                <span>上傳影片</span> 
+            </div>
+            <div class="side-border"></div>
+            <div class="drawer-hide">
+                <div class="friend-list">
+                </div>
+            </div>
+        </div>
+        <div class="notlogin">
+            <div class="please-login">
+                請先登入
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="hot-video">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel">
+                <!--<div class="carousel-item">
+                    <div class="preview"><img></div>
+                    <div class="title">0</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="preview"><img></div>
+                    <div class="title">1</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="preview"><img></div>
+                    <div class="title">2</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="preview"><img></div>
+                    <div class="title">3</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="preview"><img></div>
+                    <div class="title">4</div>
+                </div>-->
+            </div>
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hot-title">熱門影片</div>
+        <div class="video-list">
+            <!--<div class="video-card">
+                <div class="video-id" style="display: none;">video.mp4</div>
+                <div class="card-preview"><img></div>
+                <div class="video-title">video</div>
+                video src="videos/video.mp4"></video>
+            </div>
+            <div class="video-card">
+                <div class="video-id" style="display: none;">12345.mp4</div>
+                <div class="video-title">12345</div>
+            </div>-->
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="views/js/nav.js"></script>
+    <script src="views/js/main.js"></script>
+    <script src="views/js/sidebar.js"></script>
+    <script src="views/js/client.js"></script>
+    <!--<script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/sidebar.js"></script>-->
+</body>
+</html>
